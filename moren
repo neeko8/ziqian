@@ -1,0 +1,17 @@
+server {
+    #HTTP Server Default Set
+	listen 80;
+	listen 443 ssl http2 default_server;
+	server_name localhost;
+
+	#HTTP_TO_HTTPS_END
+	ssl_certificate /home/ziqian/ziqian.crt;
+	ssl_certificate_key /home/ziqian/ziqian.key;
+	ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
+    #Server ROOT
+    index index.html;
+    root /var/www/html/;
+    index index.html;  
+	
+    return 444; #NGINX HTPP Code 444
+}
